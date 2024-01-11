@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <style>
+        body {
+           
+            height: 30rem;
+
+            background-image: url(image/log.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        .MainForm{
+          
+            color: aliceblue;
+            border: 1px solid wheat ;
+            height: 500px;
+            width: 900px;
+            display: flex;
+            justify-content: canter;
+            align-items: center;
+            flex-direction: column;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            background-color:rgba(255, 255, 255, 0.048) ;
+            
+        }
+        .MainForm h2{
+            font-size: 35px;
+        }
+       
+        .d1{
+            margin: 10px;
+        }
+        .d2{
+            margin: 10px;
+        }
+        .d3{
+            margin: 10px;
+        }
+        .d4{
+            margin: 10px;
+        }
+        .d5{
+            margin: 10px;
+        }
+        .d6{
+            margin: 10px;
+        }
+        label{
+            margin-right: 20px;
+            margin-left:20px ;
+        }
+        input{
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.29);
+            border: none;
+            border-radius: 20px;
+            padding-left: 5px;
+        }
+        section{
+            height: 25px;
+            background-color: rgba(117, 91, 91, 0.123);
+            border: none;
+            border-radius: 20px;
+            padding-left: 5px;
+        }
+        .submit{
+            position: relative;
+            width: 200px;
+            left: 40%;
+            bottom: 15px;
+           background: #bb1fc3;
+           font-size: 20px;
+           height: 40px;
+        }
+        .submit:hover{
+            background-color: #6c296f;
+            transition: 0.2s;
+        }
+        .studyYear {
+           width: 50px;
+           height: 30px;
+           background-color: rgba(255, 255, 255, 0.303); 
+           border: none;
+           
+        }
+        .studyYear1{
+            background-color: rgba(255, 255, 255, 0.242);
+            
+        }
+      .university{
+        background-color: #ffffff59;
+        height: 25px;
+        border-radius: 20px;
+        
+      }
+      .school{
+        background-color: rgba(255, 255, 255, 0.381);
+        height: 25px;
+        border-radius: 20px;
+      }
+      .gender{
+        height: 25px;
+        width: 60px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.26);
+      }
+      .enrollmentYear{
+        height: 25px;
+        width: 60px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.26);
+      }
+
+      .major{
+        height: 25px;
+        width: 60px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.26);
+      }
+
+      .socialMedia{
+        height: 25px;
+        width: 60px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.26);
+      }
+      .MainForm form{
+            position: relative;
+            bottom: 20px;
+        }
+      .log{
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+
+      }
+      .log h2{
+        margin: 10px;
+        color: #a05ea3;
+      }
+      .alum{
+        width: 110px;
+        height: 40px;
+        margin-top: 10px;
+      }
+      .ens{
+        width: 100px;
+        position: relative;
+        left: 30px;
+
+      }
+
+    </style>
+</head>
+<body>
+    <div class="MainForm">
+        <div class="log">
+
+            <img class="alum" src="image/awfawgawg 3.png" alt="">
+            <h2>Inscription</h2>
+            <img class="ens" src="image/ens.png" alt="">
+
+        </div>
+        
+       
+        
+
+
+
+
+     <form>
+     
+        <div class="d1">
+
+            <label for="gender">Email </label>
+            <input class="email" type="email" name="email" id="email" placeholder="@um5.ac.ma" required>
+            <label for="gender">Nom  </label>
+            <input class="nam" type="text" name="name" id="nam" placeholder="Nom" required>
+            <label for="gender">Password </label>
+            <input class="pass" type="password" name="password" id="psw" placeholder="Mot de passe" required>
+
+        </div>
+       
+        <br>
+
+        <div class="d2">
+
+            <label for="phone">phone  </label>
+            <input class="phone" type="tel" name="phone" id="phone" placeholder="Téléphone" required>
+        
+            <label for="age">Age</label>
+            <input class="age" type="number" name="age" id="age" placeholder="Âge" required>
+            <label for="gender">Sexe</label>
+            <select class="gender" name="gender" id="gender" required>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+            </select>
+            <label for="studyYear">Année en cours</label>
+            <select class="studyYear" name="studyYear" id="studyYear" required >
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+
+            </select>
+        </div>
+       
+        <br>
+        <div class="d3">
+
+            <label for="university">université</label>
+            <select class="university" name="university" id="university" required>
+                <option value="Mohammed V de Rabat">Mohammed V de Rabat</option>
+                <option value="Cadi Ayyad à Marrakech"> Cadi Ayyad à Marrakech</option>
+                <option value="Hassan II de Casablanca">Hassan II de Casablanca</option>
+                <option value="Abdelmalek Essaâdi à Tétouan">Abdelmalek Essaâdi à Tétouan</option>
+                <option value="Tofail à Kénitra">Tofail à Kénitra</option>
+                <option value="Mohammed Premier à Oujda">Mohammed Premier à Oujda</option>
+                <option value="Moulay Slimane à Béni Mellal">Moulay Slimane à Béni Mellal</option>
+            </select>
+
+            <label for="school">École</label>
+            <select class="school" name="school" id="school" required>
+                <option value="ENS">ENS</option>
+                <option value="EST">EST</option>
+                <option value="FST">FST</option>
+                <option value="ENSAM">ENSAM</option>
+                <option value="ENSIAS">ENSIAS</option>
+                <option value="AUTRE">Autre</option>
+            </select>
+        
+            <label for="city">city</label>
+            <input class="city" type="text" name="city" id="city" placeholder="Ville" required>
+
+        </div>
+       
+       <br>
+
+       <div class="d4">
+
+            <label for="enrollmentYear">Année d'inscription</label>
+            <select class="enrollmentYear" name="enrollmentYear" id="enrollmentYear" required>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+            </select>
+            <label for="Année de diplomation">Année de diplomation</label>
+            <input class="graduationYear" type="number" name="graduationYear" id="graduationYear" placeholder="Année de diplomation (promotion)" required>
+            
+            <label for="major">Filière </label>
+            <select class="major" name="major" id="major" required>
+                <option value="INFO">INFO</option>
+                <option value="MATH">MATH</option>
+                <option value="E.ISLAMIQUE">E.ISLAMIQUE</option>
+                <option value="PHYS">PHYS</option>
+                <option value="ARAB">ARAB</option>
+                <option value="GENI">GENI</option>
+                <option value="PHYLOS">PHYLOS</option>
+            </select>
+
+       </div>
+       
+        <br>
+
+        <div class="d5">
+
+            <label for="clubs">clubs </label>
+            <input class="clubs" type="text" name="clubs" id="clubs" placeholder="Clubs dans lesquels il est membre" required>
+            <label for="interests">interests </label>
+            <input class="interests" type="text" name="interests" id="interests" placeholder="Intérêts" required>
+            <label for="socialMedia">Réseaux sociaux</label>
+            <select class="socialMedia" name="socialMedia" id="socialMedia" required>
+                <option value="instagram">Instagram</option>
+                <option value="fiac">Fiac</option>
+                <option value="linkdin">LinkedIn</option>
+                <option value="twit">Twitter</option>
+                <option value="gmail">Gmail</option>
+                <option value="discord">Discord</option>
+                <option value="snap">Snap</option>
+                <option value="autre">Autre</option>
+            </select>
+
+        </div>
+      
+        <br>
+
+        <div class="d6">
+
+            <label for="position">poste  </label>
+            <input class="position" type="text" name="position" id="position" placeholder="Poste" required>
+            <label for="imageInput">Sélectionnez une image :</label>
+            <input type="file" id="imageInput" accept="image/*" class="bu">
+
+        </div>
+        
+        <br>
+        <input class="submit" type="button" value="Soumettre" id="submitData">
+        <div id="errorMessage" class="error-message"></div>
+        <div id="successMessage" class="success-message"></div>
+    </form>
+
+
+
+
+
+
+
+    </div>
+
+    <script type="module">
+     
+        import { getStorage, ref as storageRef, uploadBytes } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, fetchSignInMethodsForEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyB3XP3s6NSiGOddbJbG7_crTMAN6qUWpsc",
+          authDomain: "auth-946d8.firebaseapp.com",
+          projectId: "auth-946d8",
+          storageBucket: "auth-946d8.appspot.com",
+          messagingSenderId: "853045030996",
+          appId: "1:853045030996:web:a0c8845cddaff045653dc1"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const database = getDatabase(app);
+        const storage = getStorage(app);
+
+        document.getElementById('submitData').addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const nam = document.getElementById('nam').value;
+            const password = document.getElementById('psw').value;
+            const phone = document.getElementById('phone').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const studyYear = document.getElementById('studyYear').value;
+            const school = document.getElementById('school').value;
+            const university = document.getElementById('university').value;
+            const city = document.getElementById('city').value;
+            const enrollmentYear = document.getElementById('enrollmentYear').value;
+            const graduationYear = document.getElementById('graduationYear').value;
+            const major = document.getElementById('major').value;
+            const clubs = document.getElementById('clubs').value;
+            const interests = document.getElementById('interests').value;
+            const socialMedia = document.getElementById('socialMedia').value;
+            const position = document.getElementById('position').value;
+            const errorMessageElement = document.getElementById('errorMessage');
+            const successMessageElement = document.getElementById('successMessage');
+            const imageInput = document.getElementById('imageInput');
+            const file = imageInput.files[0];
+
+            errorMessageElement.textContent = "";
+            successMessageElement.textContent = "";
+
+            try {
+                const signInMethods = await fetchSignInMethodsForEmail(auth, email);
+
+                if (signInMethods.length > 0) {
+                    errorMessageElement.textContent = 'Cette adresse e-mail est déjà utilisée.';
+                } else {
+                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                    const user = userCredential.user;
+
+                    const storageRefUser = storageRef(storage, `images/${user.uid}/${file.name}`);
+                    await uploadBytes(storageRefUser, file);
+
+                    const userRef = ref(database, 'users/' + user.uid);
+                    await set(userRef, {
+                        email,
+                        nam,
+                        phone,
+                        age,
+                        gender,
+                        studyYear,
+                        school,
+                        university,
+                        city,
+                        enrollmentYear,
+                        graduationYear,
+                        major,
+                        clubs,
+                        interests,
+                        socialMedia,
+                        position,
+                        imageUrl: `images/${user.uid}/${file.name}`
+                    });
+
+                    successMessageElement.textContent = 'Utilisateur créé avec succès';
+
+                    // Redirection vers home.html
+                    window.location.href = 'home.html';
+                }
+            } catch (error) {
+                errorMessageElement.textContent = 'Une erreur s\'est produite : ' + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

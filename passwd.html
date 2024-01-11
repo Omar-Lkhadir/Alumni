@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réinitialisation de mot de passe</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30rem;
+            
+            background-color: #f0f0f0;
+       
+            font-family: 'Arial', sans-serif;
+            background-image: url(image/bg.png);
+            background-repeat: no-repeat;
+            background-position: top;
+      
+        }
+
+        .ResetForm {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.081);
+            height: 400px;
+            width: 800px;
+           
+            background-repeat: no-repeat;
+            background-position: right;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+           
+           
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            position: relative;
+            bottom: 30px;
+        }
+        .error-message {
+            color: #ff5656;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            margin-top: 10px;
+            text-align: center;
+        }
+        h1{
+            font-size: 15px;
+            color: white; 
+            margin-left: 20px;
+        }
+        h2{
+            color: #f0f0f0;
+            font-size: 30px;
+            
+          
+        }
+        input{
+            color: white;
+            padding-left: 10px;
+            border-radius: 20px;
+            border: none;
+            margin: 15px;
+            height: 30px;
+            background-color: #dccccc44;
+            border: solid 1px black;
+        }
+        .bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            margin-bottom: 50px;
+        }
+        .alum{
+            width: 100px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        .ens{
+           
+            position: relative;
+            bottom: 20px;
+        }
+        .submit{
+            background-color: #a83ba2;
+        }
+        .submit:hover{
+            background-color: #650861;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ResetForm">
+        <div class="bar">
+
+        <img class="alum" src="image/awfawgawg 3.png" alt="">
+        <h2>I forget my password</h2> 
+       <img class="ens" src="image/ens.png" alt=""> 
+           
+        </div>
+       
+        <form>
+            <h1>  enter your adress email below</h1>
+            <input class="email" type="email" name="email" id="email" placeholder="Email" required>
+            <input class="submit" type="button" value="Envoyer le code" id="sendCodeButton">
+            <div id="errorMessage" class="error-message"></div>
+            <div id="successMessage" class="success-message"></div>
+        </form>
+    </div>
+
+    <script type="module">
+        // Importez les fonctions nécessaires depuis les SDK que vous utilisez
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        // Configuration Firebase de votre application web
+        const firebaseConfig = {
+    apiKey: "AIzaSyB3XP3s6NSiGOddbJbG7_crTMAN6qUWpsc",
+    authDomain: "auth-946d8.firebaseapp.com",
+    databaseURL: "https://auth-946d8-default-rtdb.firebaseio.com",
+    projectId: "auth-946d8",
+    storageBucket: "auth-946d8.appspot.com",
+    messagingSenderId: "853045030996",
+    appId: "1:853045030996:web:a0c8845cddaff045653dc1"
+  };
+
+        // Initialisez Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        document.getElementById('sendCodeButton').addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const errorMessageElement = document.getElementById('errorMessage');
+            
+            errorMessageElement.textContent = "";  // Réinitialiser le message d'erreur
+
+            try {
+                await sendPasswordResetEmail(auth, email);
+                document.getElementById('successMessage').textContent = 'Code envoyé avec succès';
+                window.location.href = 'msg.html';
+            } catch (error) {
+                errorMessageElement.textContent = 'Erreur lors de l\'envoi du code : ' + error.message;
+            }
+        });
+    </script>
+</body>
+</html>

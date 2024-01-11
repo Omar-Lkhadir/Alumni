@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            color: #343a40;
+            background-image: url(image/bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .user-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+
+        .user-card {
+            position: relative;
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+            background-color: #ffffff49;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            height: 500px;
+            position: relative;
+           
+           
+        }
+        .user-card::before {
+            content: "";
+            position: absolute;
+          
+            width: 100%;
+            height: 30%;
+            background-color: #a3278c; /* Mauve */
+            z-index: 0;
+        }
+       
+
+      
+       
+
+        .user-card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: 2s;
+        }
+        /*____________________________________________*/
+        .user-card-parts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+           
+            bottom: 00px;
+            z-index: 30;
+         
+        }
+       
+        
+
+
+        .user-card-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: 20px;
+            background-color: #e703e3;
+            margin-right: 160px;
+            border: solid #a3278c 10px;
+
+        }
+        .user-card-image:hover{
+            transition: 1s;
+            margin: 0;
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            position: relative;
+            bottom: 8px;
+        }
+
+        .user-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: width 0.5s;
+        }
+
+        
+
+        .user-card-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color:rgba(31, 214, 214, 0);
+            z-index:1 ;
+            font-size: 20px;
+           width: 100%;
+           text-align: center;
+        
+        }
+        .user-card:hover::before{
+           height: 100%;
+           transition: 1s;
+        }
+        /*------------*/
+        .user-card-info:hover {
+            position: relative;
+            
+            background-color: #a3278c;
+            transition: 1s;
+            
+        }
+       
+        
+
+        .user-card:hover  .user-card-info {
+            background-color: rgba(255, 255, 255, 0);
+            transition: 0.5s;
+        }
+
+        .user-card h3 {
+            margin-bottom: 10px;
+            color: #4B4964;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .user-card p {
+            color: #343a40;
+            margin: 5px 0;
+        }
+
+
+        
+
+        .logo img{
+            margin: 15px;
+            width:150px;
+        }
+        .content{
+        display: flex;
+        flex-direction:column;
+        
+        
+        }
+            .bar_h{
+            width: 100%;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            font-weight: bold;
+            position: relative;
+            bottom: 20px;
+
+        }
+        .lien{
+            margin-left: 120px;
+        }
+        .lien ul{
+
+            display: flex;
+            flex-direction: row;
+        
+        }
+
+        .lien ul li {
+            margin-right: 80px ;
+            list-style: none;
+            font-size: 27px;
+            
+        }
+            .lien ul li:hover{
+            text-shadow: 0px 0px 120px #83156b, 0px 0px 20px #4c033c, 0px 0px 40px #5c0048, 0px 0px 80px #540142;
+            transition: 0.5s;
+        }
+        a{
+             text-decoration: none;
+             color: beige;
+        }
+        .butt{
+             display: flex;
+             position: relative;
+             bottom: 9px;
+        
+        }
+
+        .b1{
+        
+            background: linear-gradient(to right, #3F023A, #D256B8);
+            font: 27px;
+            border: none;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            padding-top: 10px;
+            padding-left:9px ;
+         padding-right: 9px;
+        }
+        .b1:hover{
+            color:rgba(255, 255, 255, 0.982) ;
+            background: linear-gradient(to right, #e526c5, #60054cd1);
+        
+        }
+
+
+
+
+        .butt a{
+            width: 90px;
+            font-size: 27px;
+            margin: 15px;
+            padding-left: 20px;
+            height: 40px;
+            padding-top: 5px;
+        }
+        .corps{
+            display: flex;
+            justify-content: center;
+            
+            flex-direction: column;
+        
+        }
+
+        .corps img{
+            width: 390px;
+            position: relative;
+            left: 400px;
+            top: 50px;
+        }
+        .corps nav h1{
+            color: white;
+            font-weight: bold;
+            font-size: 65px;
+            width: 900px;
+            text-align: center;
+            position:relative;
+            top: 20px;
+            left: 160px;
+           
+        }
+
+  
+
+        
+       
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+
+
+
+        <div class="bar_h">
+            <section class="logo">
+        
+              <img src="image/awfawgawg 3.png" alt="">
+            
+            </section>
+            <section class="lien">
+              <ul>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+                <li><a href="team.html"> Team</a></li>
+              </ul>
+            </section>
+            
+                <a href="Acceuil1.html" class="b1" >Déconnexion</a>
+            
+        
+          </div>
+          
+          <div class="corps">
+            <img src="image/welcome.png" alt="">
+            <nav>
+               <h1>   to Alumni </h1>
+            </nav>
+           
+          </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="user-container" id="userCardsContainer">
+            
+        </div>
+    </div>
+
+    <script type="module">
+        // Import des bibliothèques Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+        import { getStorage, ref as storageRef, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+        // Config Firebase
+        const firebaseConfig = {
+            apiKey: "VOTRE_CLE_API",
+            authDomain: "auth-946d8.firebaseapp.com",
+            databaseURL: "https://auth-946d8-default-rtdb.firebaseio.com",
+            projectId: "auth-946d8",
+            storageBucket: "auth-946d8.appspot.com",
+            messagingSenderId: "853045030996",
+            appId: "1:853045030996:web:a0c8845cddaff045653dc1"
+        };
+
+        // Initialisation de Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const storage = getStorage(app);
+
+        // Référence au conteneur des cartes utilisateurs
+        const userCardsContainer = document.getElementById('userCardsContainer');
+
+        // Référence à la collection 'users' dans la base de données
+        const usersRef = ref(database, 'users');
+
+        // Récupération des données des utilisateurs
+        get(usersRef).then(async (snapshot) => {
+            if (snapshot.exists()) {
+                const users = snapshot.val();
+                for (const [userId, userData] of Object.entries(users)) {
+                    await addUserCard(userId, userData);
+                }
+            } else {
+                console.log('Aucun utilisateur trouvé dans la base de données.');
+            }
+        }).catch((error) => {
+            console.error('Erreur lors de la récupération des utilisateurs :', error);
+        });
+
+        // Fonction pour ajouter une carte utilisateur
+        async function addUserCard(userId, userData) {
+            const userCard = document.createElement('div');
+            userCard.classList.add('user-card', 'shadow-sm');
+
+            // Creating user card parts
+            const userCardParts = document.createElement('div');
+            userCardParts.classList.add('user-card-parts');
+
+            // User image part
+            const userImagePart = document.createElement('div');
+            userImagePart.classList.add('user-card-image');
+
+            const userImage = document.createElement('img');
+            userImage.alt = "User Image";
+
+            try {
+                const imageUrl = await getDownloadURL(storageRef(storage, userData.imageUrl));
+                userImage.src = imageUrl;
+            } catch (error) {
+                // En cas d'erreur, utilisez une image par défaut
+                userImage.src = "lien_vers_image_par_defaut.jpg";
+            }
+
+            userImagePart.appendChild(userImage);
+            userCardParts.appendChild(userImagePart);
+
+            // User info part
+            const userInfoPart = document.createElement('div');
+            userInfoPart.classList.add('user-card-info');
+
+            userInfoPart.innerHTML = `
+                <p><strong>Nom:</strong> ${userData.nam || 'Non défini'}</p>
+                <p><strong>Email:</strong> ${userData.email || 'Non défini'}</p>
+                <p><strong>Âge:</strong> ${userData.age || 'Non défini'}</p>
+                <p><strong>Téléphone:</strong> ${userData.phone || 'Non défini'}</p>
+                <p><strong>École:</strong> ${userData.school || 'Non défini'}</p>
+                <p><strong>Ville:</strong> ${userData.city || 'Non défini'}</p>
+                <p><strong>Année d'inscription:</strong> ${userData.enrollmentYear || 'Non défini'}</p>
+                <p><strong>Année de diplomation (promotion):</strong> ${userData.graduationYear || 'Non défini'}</p>
+                <p><strong>Filière:</strong> ${userData.major || 'Non défini'}</p>
+                <p><strong>Clubs:</strong> ${userData.clubs || 'Non défini'}</p>
+                <p><strong>Intérêts:</strong> ${userData.interests || 'Non défini'}</p>
+                <p><strong>Réseaux sociaux:</strong> ${userData.socialMedia || 'Non défini'}</p>
+                <p><strong>Post:</strong> ${userData.position || 'Non défini'}</p>
+
+               
+            `;
+
+            userCardParts.appendChild(userInfoPart);
+            userCard.appendChild(userCardParts);
+
+            userCardsContainer.appendChild(userCard);
+        }
+    </script>
+</body>
+
+</html>
